@@ -5,12 +5,18 @@ import Pages from './pages/Pages';
 import Data from './components/flashDeals/Data';
 import { useState } from 'react';
 import Cart from './common/cart/Cart';
+import Footer from "./common/footer/footer"
+import Sdata from "./components/shops/Sdata"
+ 
 
 function App() {
   // step1: Fetch item from database
   const{productItems} = Data
+  const { shopItems } = Sdata
+
 
   const [cartItem, setCardItem] = useState([])
+  
 
   const addToCart= (product) => {
     const productExit = cartItem.find((item) => item.id === product.id)
@@ -39,11 +45,14 @@ function App() {
           <Route path="/" exact>
             <Pages productItems = {productItems} addToCart={addToCart} cartItem={cartItem}/>
           </Route>
-
+          <Route path='/' exact>
+            <Pages productItems={productItems} addToCart={addToCart} shopItems={shopItems} />
+          </Route>
           <Route path="/cart" exact>
             <Cart cartItem = {cartItem} addToCart={addToCart} decreaseQty={decreaseQty}/>
           </Route>
         </Switch>
+        <Footer />
     </Router>
     </>
   );
