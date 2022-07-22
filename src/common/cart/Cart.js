@@ -7,7 +7,7 @@ const Cart = ({ cartItem, addToCart, decreaseQty }) => {
   return (
     <>
       <section className="cart-items">
-        <div className="container d_flex">
+        <div className="container"><center>
           <div className="cart-details">
             {cartItem.length === 0 && 
               <h1 className="no-items product">No Items are added in Cart</h1>
@@ -17,9 +17,10 @@ const Cart = ({ cartItem, addToCart, decreaseQty }) => {
             return (
               <div className="cart-list product d-flex">
                 <div className="img">
-                  <img src={item.cover} alt="" />
+                  <img src={item.cover} alt="/" />
                 </div>
-                <div className="cart-details">
+                <div className="" style={{display:"flex"}}>
+                <div className="cart-details" style={{display:"block"}}>
                   <h3>{item.name}</h3>
                   <h4>
                     {item.price}.00 * {item.qty}
@@ -32,7 +33,7 @@ const Cart = ({ cartItem, addToCart, decreaseQty }) => {
                       <i className="fa-solid fa-xmark"></i>
                     </button>
                   </div>
-                  <div className="cartControl d-flex">
+                  <div className="cartControl ">
                     <button className="inCart" onClick={() => addToCart(item)}>
                       <i className="fa fa-plus"></i>
                     </button>
@@ -44,7 +45,7 @@ const Cart = ({ cartItem, addToCart, decreaseQty }) => {
                     </button>
                   </div>
                 </div>
-                
+                </div>
                 <div className="cart-item-price"></div>
 
               </div>
@@ -61,6 +62,7 @@ const Cart = ({ cartItem, addToCart, decreaseQty }) => {
             <h4>Total Price : </h4>
             <h3>${totalPrice}.00 </h3>
           </div>
+          </center>
         </div>
       </section>
     </>
