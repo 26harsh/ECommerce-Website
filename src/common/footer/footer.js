@@ -7,8 +7,8 @@ const Footer = () => {
       <footer>
         <div className='container grid2'>
           <div className='box'>
-            <h1>Ecommerce</h1>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Auctor libero id et, in gravida. Sit diam duis mauris nulla cursus. Erat et lectus vel ut sollicitudin elit at amet.</p>
+            <h1>Shopit</h1>
+            <p>Shopit is an e-commerce service that enables the sharing, publishing, and selling of products and information on multiple platforms online.</p>
             <div className='icon d_flex'>
               <div className='img d_flex'>
                 <i className='fa-brands fa-google-play'></i>
@@ -45,7 +45,7 @@ const Footer = () => {
             <h2>Contact Us</h2>
             <ul>
               <li>70 Hiranadnai Estate Ghodbandar road</li>
-              <li>Email: okok.help@gmail.com</li>
+              <li>Email: shopit@gmail.com</li>
               <li>Phone: +91 3 456 780</li>
             </ul>
           </div>
